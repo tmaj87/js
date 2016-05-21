@@ -7,16 +7,15 @@ var interval = 300;
 
 loveLetter.prototype = {
 	config: function() {
-		this.lifetime = 5000; // in miliseconds
-		this.margin = 100; // in pixels
+		this.lifetime = 5000;
+		this.margin = 100;
 	},
 	
 	create: function() {
 		this.config();
 		var self = this;
-//		this.timer;
 		this.letter = $( document.createElement( 'div' ) );
-		this.letter.attr( 'id', instance++ ); // any better way?
+		this.letter.attr( 'id', instance++ );
 		this.letter.attr( 'class', 'letter' );
 		var text = '';
 		switch( Math.floor(11*Math.random()) ) {
@@ -76,17 +75,6 @@ $( function() {
 			document.body.removeChild( element );
 		} )
 	}
-	
-//	var border = $( document.createElement( 'div' ) );
-//	border.css( {
-//		background: 'lightgray',
-//		position: 'absolute',
-//		left: '100px',
-//		top: '100px',
-//		height: window.innerHeight-200+'px',
-//		width: window.innerWidth-200+'px'
-//	} );
-//	$('body').append( border );
 	
 	var button = $( document.createElement( 'input' ) ).attr( {
 		type: 'button',
